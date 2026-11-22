@@ -1,59 +1,55 @@
-<!-- Retro Newsprint / Halftone Profile - 786AdiPY -->
-<div align="center">
-  <img src="assets/banner.svg" alt="Adithya A M Masthead Banner" width="100%" />
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/banner-dark.svg">
+  <img alt="786ADIPY Masthead" src="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/banner-light.svg" width="100%">
+</picture>
 
-<br />
+<p align="center">
+  <strong>ADITHYA A M</strong> · <code>@786AdiPY</code> · <strong>TECH ENTHUSIAST</strong><br>
+  <code>/ Full-Stack Developer</code> &nbsp; <code>/ AI Engineer</code> &nbsp; <code>/ Systems &amp; Security</code>
+</p>
 
-<!-- PINNED SECTION -->
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td align="left">
-      <strong>■ PINNED</strong>
-    </td>
-    <td align="right">
-      <sub><code>CUSTOMIZE YOUR PINS ↗</code></sub>
-    </td>
-  </tr>
-</table>
+---
 
-<table width="100%" border="0" cellspacing="8" cellpadding="0">
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/786AdiPY/Kompress">
-        <img src="assets/card-kompress.svg" alt="Kompress" width="100%" />
-      </a>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/786AdiPY/RangeShield-AI">
-        <img src="assets/card-rangeshield.svg" alt="RangeShield-AI" width="100%" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/786AdiPY/Arize">
-        <img src="assets/card-arize.svg" alt="Arize" width="100%" />
-      </a>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/786AdiPY/LeetGeek">
-        <img src="assets/card-leetgeek.svg" alt="LeetGeek" width="100%" />
-      </a>
-    </td>
-  </tr>
-</table>
+### ■ FEATURED
 
-<br />
+<a href="https://github.com/786AdiPY/RangeShield-AI">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/featured-dark.svg">
+    <img alt="Featured Project: RangeShield-AI" src="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/featured-light.svg" width="100%">
+  </picture>
+</a>
 
-<!-- CONTRIBUTIONS SECTION -->
-<div align="center">
-  <img src="assets/contributions.svg" alt="GitHub Contributions Calendar" width="100%" />
-</div>
+---
 
-<br />
+### ■ NOW
 
-<!-- FOOTER DIVIDER -->
-<div align="center">
-  <img src="assets/footer.svg" alt="Activity Overview | Code Review" width="100%" />
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/now-dark.svg">
+  <img alt="Now: Building, Learning, Reading" src="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/now-light.svg" width="100%">
+</picture>
+
+---
+
+### ■ STACK
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/stack-dark.svg">
+  <img alt="Technology Stack" src="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/stack-light.svg" width="100%">
+</picture>
+
+---
+
+### ■ STATS
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/stats-dark.svg">
+  <img alt="Language Statistics and Contributions" src="https://raw.githubusercontent.com/786AdiPY/786AdiPY/main/assets/stats-light.svg" width="100%">
+</picture>
+
+---
+
+<p align="center">
+  <a href="https://linkedin.com/in/adithya-am-adi"><code>LinkedIn: in/adithya-am-adi</code></a> &nbsp;·&nbsp;
+  <a href="mailto:adithya@example.com"><code>Email: adithya@example.com</code></a> &nbsp;·&nbsp;
+  <a href="https://adithya.dev"><code>Portfolio: adithya.dev</code></a>
+</p>
