@@ -76,7 +76,7 @@
     .avatar-img {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
+      border-radius: 6px;
       border: 3px solid #111111;
       object-fit: cover;
       box-shadow: 4px 4px 0px #111111;
@@ -148,7 +148,7 @@
       width: 38px;
       height: 38px;
       border: 1.5px solid #111111;
-      border-radius: 50%;
+      border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -201,11 +201,10 @@
     .readme-container {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
     }
 
     .banner-wrapper img,
-    .header-wrapper img,
     .contributions-wrapper img,
     .footer-wrapper img {
       width: 100%;
@@ -255,7 +254,6 @@
       <!-- LEFT SIDEBAR: Kept strictly as specified by user -->
       <aside class="left-sidebar">
         <div class="avatar-wrapper">
-          <!-- User's actual profile photo kept! -->
           <img class="avatar-img" src="assets/avatar-halftone.png" alt="786AdiPY Avatar" />
         </div>
 
@@ -295,7 +293,7 @@
         </div>
       </aside>
 
-      <!-- RIGHT COLUMN: Pinned, Banner, Contributions, Footer -->
+      <!-- RIGHT COLUMN: Banner, Pinned, Contributions, Footer -->
       <main class="right-column">
         <!-- Tabs -->
         <nav class="tabs-nav">
@@ -306,19 +304,14 @@
           <a class="tab-item">Stars <span class="tab-count">12</span></a>
         </nav>
 
-        <!-- README content -->
+        <!-- Profile Content -->
         <div class="readme-container">
           <!-- 1. Full-width banner -->
           <div class="banner-wrapper">
             <img src="assets/banner.svg" alt="786ADIPY Banner" />
           </div>
 
-          <!-- 2. Header Block -->
-          <div class="header-wrapper">
-            <img src="assets/header.svg" alt="Header Block" />
-          </div>
-
-          <!-- 3. PINNED Section -->
+          <!-- 2. PINNED Section -->
           <div>
             <div class="pinned-header">
               <strong>■ PINNED</strong>
@@ -340,12 +333,12 @@
             </div>
           </div>
 
-          <!-- 4. Contribution Section -->
+          <!-- 3. Contribution Section -->
           <div class="contributions-wrapper">
             <img src="assets/contributions.svg" alt="Contributions Calendar" />
           </div>
 
-          <!-- 5. Footer Divider -->
+          <!-- 4. Footer Divider -->
           <div class="footer-wrapper">
             <img src="assets/footer.svg" alt="Activity Overview | Code Review" />
           </div>

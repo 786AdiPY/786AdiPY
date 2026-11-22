@@ -1,6 +1,6 @@
 """
 generate_header.py
-Generates the retro newsprint header block SVG (optional SVG embed for README).
+Generates the retro newsprint header block SVG (valid XML).
 """
 import os
 import sys
@@ -51,7 +51,7 @@ def generate_header(output_path="assets/header.svg"):
 
   <rect width="980" height="90" class="head-bg" />
   
-  <!-- Subtle newsprint enclosure -->
+  <!-- Newsprint border -->
   <rect x="1" y="1" width="978" height="88" rx="6" ry="6" fill="#F1EDE4" stroke="#111111" stroke-width="1.2" />
 
   <!-- Name & Handle & Tagline -->
@@ -60,7 +60,7 @@ def generate_header(output_path="assets/header.svg"):
   <text x="280" y="30" class="head-tagline">&#9632; TECH ENTHUSIAST</text>
 
   <!-- Slash list -->
-  <text x="24" y="62" class="head-slash">/ Full-Stack Developer &nbsp;&nbsp;&nbsp; / AI Engineer &nbsp;&nbsp;&nbsp; / Systems &amp; Security</text>
+  <text x="24" y="62" class="head-slash">/ Full-Stack Developer &#160;&#160;&#160; / AI Engineer &#160;&#160;&#160; / Systems &amp; Security</text>
 
   <!-- LinkedIn link indicator -->
   <text x="956" y="48" class="head-link" text-anchor="end">&#128279; in/adithya-am-adi &#8599;</text>

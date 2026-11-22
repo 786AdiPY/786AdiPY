@@ -5,26 +5,17 @@
 
 <br />
 
-<!-- Header block -->
-<div align="center">
-  <img src="assets/header.svg" alt="Adithya A M Header Block" width="100%" />
-</div>
-
-<br />
-
 <!-- PINNED SECTION -->
-<div align="left">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td align="left">
-        <strong>■ PINNED</strong>
-      </td>
-      <td align="right">
-        <sub><code>CUSTOMIZE YOUR PINS ↗</code></sub>
-      </td>
-    </tr>
-  </table>
-</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left">
+      <strong>■ PINNED</strong>
+    </td>
+    <td align="right">
+      <sub><code>CUSTOMIZE YOUR PINS ↗</code></sub>
+    </td>
+  </tr>
+</table>
 
 <table width="100%" border="0" cellspacing="8" cellpadding="0">
   <tr>
