@@ -1,0 +1,285 @@
+/* ==UserStyle==
+@name           GitHub Retro Newsprint Profile (786AdiPY)
+@namespace      github.com/786AdiPY/github-newsprint
+@version        1.0.0
+@description    Retro newsprint & halftone theme for 786AdiPY GitHub profile
+@author         786AdiPY
+@license        MIT
+==/UserStyle== */
+
+@-moz-document url-prefix("https://github.com/786AdiPY"), url("https://github.com/786AdiPY") {
+  /* Google Fonts import for browser preview */
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+  /* ==========================================================================
+     1. COLOR PALETTE & CSS VARIABLES
+     Strictly monochrome newsprint:
+     Cream Paper: #F1EDE4, Ink: #111111, Mid-Grey: #888888, Accent Grey: #555555
+     ========================================================================== */
+  :root,
+  [data-color-mode="dark"],
+  [data-color-mode="light"],
+  [data-dark-theme="dark"],
+  [data-light-theme="light"],
+  body {
+    --bgColor-default: #F1EDE4 !important;
+    --bgColor-muted: #E5DFD4 !important;
+    --bgColor-inset: #ECE7DE !important;
+    --fgColor-default: #111111 !important;
+    --fgColor-muted: #444444 !important;
+    --borderColor-default: #111111 !important;
+    --borderColor-muted: #888888 !important;
+    --color-canvas-default: #F1EDE4 !important;
+    --color-canvas-subtle: #E5DFD4 !important;
+    --color-canvas-inset: #ECE7DE !important;
+    --color-fg-default: #111111 !important;
+    --color-fg-muted: #444444 !important;
+    --color-border-default: #111111 !important;
+    --color-border-muted: #888888 !important;
+    --color-btn-bg: #F1EDE4 !important;
+    --color-btn-border: #111111 !important;
+    --color-btn-text: #111111 !important;
+    --color-btn-primary-bg: #111111 !important;
+    --color-btn-primary-text: #F1EDE4 !important;
+    --color-btn-primary-border: #111111 !important;
+    background-color: #F1EDE4 !important;
+    color: #111111 !important;
+  }
+
+  /* Keep top GitHub navbar dark as requested */
+  header.HeaderMktg,
+  header.AppHeader,
+  .AppHeader,
+  .header-logged-out {
+    background-color: #0d1117 !important;
+    border-bottom: 2px solid #111111 !important;
+  }
+
+  header.HeaderMktg a,
+  header.AppHeader a,
+  .AppHeader a,
+  .header-logged-out a {
+    color: #f0f6fc !important;
+  }
+
+  /* Page background */
+  main,
+  .application-main {
+    background-color: #F1EDE4 !important;
+  }
+
+  /* ==========================================================================
+     2. TYPOGRAPHY
+     Headings: Bold serif (DM Serif Display / Georgia)
+     Body & Meta: Monospace (IBM Plex Mono / Courier)
+     ========================================================================== */
+  h1, h2, h3, h4, h5, h6,
+  .vcard-names span.vcard-fullname,
+  .pinned-item-list-item .repo,
+  .f1, .f2, .f3, .f4 {
+    font-family: 'DM Serif Display', 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+    color: #111111 !important;
+    font-weight: 400 !important;
+  }
+
+  body,
+  p,
+  span,
+  a,
+  button,
+  input,
+  .user-profile-bio,
+  .vcard-details,
+  .f5, .f6,
+  .text-mono,
+  .color-fg-muted {
+    font-family: 'IBM Plex Mono', 'Courier Prime', 'Consolas', monospace !important;
+    color: #111111 !important;
+  }
+
+  /* Links with vintage newsprint underline */
+  a.Link--primary,
+  a.Link--secondary,
+  .vcard-details a {
+    color: #111111 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+  }
+
+  /* ==========================================================================
+     3. PROFILE NAVIGATION TABS (Bordered Boxes)
+     ========================================================================== */
+  .UnderlineNav {
+    border-bottom: 2px solid #111111 !important;
+    background: transparent !important;
+  }
+
+  .UnderlineNav-body {
+    gap: 6px !important;
+  }
+
+  .UnderlineNav-item {
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    border: 1.5px solid #111111 !important;
+    border-radius: 4px 4px 0 0 !important;
+    background-color: #E5DFD4 !important;
+    color: #111111 !important;
+    padding: 6px 14px !important;
+    transition: none !important;
+  }
+
+  .UnderlineNav-item:hover {
+    background-color: #DDD6C8 !important;
+  }
+
+  .UnderlineNav-item.selected,
+  .UnderlineNav-item[aria-current="page"] {
+    background-color: #F1EDE4 !important;
+    border: 2px solid #111111 !important;
+    border-bottom: 2px solid #F1EDE4 !important;
+    margin-bottom: -2px !important;
+    color: #111111 !important;
+  }
+
+  .UnderlineNav-item .Counter {
+    background-color: #111111 !important;
+    color: #F1EDE4 !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    border-radius: 3px !important;
+    padding: 1px 5px !important;
+  }
+
+  /* ==========================================================================
+     4. PINNED REPO CARDS (Newsprint Border + Shadow)
+     ========================================================================== */
+  .pinned-item-list-item .Box {
+    background-color: #F1EDE4 !important;
+    border: 1.5px solid #111111 !important;
+    border-radius: 6px !important;
+    box-shadow: 3px 3px 0px #111111 !important;
+    transition: transform 0.1s ease, box-shadow 0.1s ease !important;
+  }
+
+  .pinned-item-list-item .Box:hover {
+    transform: translate(-1px, -1px) !important;
+    box-shadow: 4px 4px 0px #111111 !important;
+  }
+
+  .pinned-item-list-item .repo {
+    font-size: 17px !important;
+  }
+
+  .pinned-item-list-item .Label--secondary {
+    border: 1px solid #888888 !important;
+    background: transparent !important;
+    color: #444444 !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    border-radius: 10px !important;
+  }
+
+  /* ==========================================================================
+     5. CONTRIBUTION CALENDAR (Greyscale 4-level cells)
+     ========================================================================== */
+  .js-calendar-graph,
+  .js-yearly-contributions,
+  .ContributionCalendar-grid {
+    background-color: #F1EDE4 !important;
+    border: 1px solid #111111 !important;
+    border-radius: 6px !important;
+    padding: 12px !important;
+  }
+
+  /* Greyscale levels for contribution squares */
+  td.ContributionCalendar-day[data-level="0"],
+  rect[data-level="0"] {
+    fill: #F1EDE4 !important;
+    background-color: #F1EDE4 !important;
+    outline: 1px solid #D5CFC3 !important;
+  }
+
+  td.ContributionCalendar-day[data-level="1"],
+  rect[data-level="1"] {
+    fill: #C4BEB2 !important;
+    background-color: #C4BEB2 !important;
+    outline: none !important;
+  }
+
+  td.ContributionCalendar-day[data-level="2"],
+  rect[data-level="2"] {
+    fill: #888277 !important;
+    background-color: #888277 !important;
+    outline: none !important;
+  }
+
+  td.ContributionCalendar-day[data-level="3"],
+  rect[data-level="3"] {
+    fill: #45413D !important;
+    background-color: #45413D !important;
+    outline: none !important;
+  }
+
+  td.ContributionCalendar-day[data-level="4"],
+  rect[data-level="4"] {
+    fill: #111111 !important;
+    background-color: #111111 !important;
+    outline: none !important;
+  }
+
+  /* Year filter buttons */
+  .js-profile-timeline-year-list a,
+  ul.filter-list a {
+    font-family: 'IBM Plex Mono', monospace !important;
+    border: 1px solid #888888 !important;
+    color: #111111 !important;
+    border-radius: 3px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .js-profile-timeline-year-list a.selected,
+  ul.filter-list a.selected {
+    background-color: #111111 !important;
+    color: #F1EDE4 !important;
+    border-color: #111111 !important;
+    font-weight: 700 !important;
+  }
+
+  /* ==========================================================================
+     6. LEFT SIDEBAR & AVATAR
+     As specified: "keep the left side as it is (profile picture and the rest of the part)"
+     Preserves user's actual avatar and sidebar layout with crisp newsprint ink styling.
+     ========================================================================== */
+  .avatar-user,
+  .avatar {
+    /* Keep original avatar crisp, add a subtle border */
+    border: 2px solid #111111 !important;
+    border-radius: 6px !important;
+  }
+
+  /* Edit profile button */
+  .js-profile-editable-area button,
+  .btn.btn-block {
+    background-color: #111111 !important;
+    color: #F1EDE4 !important;
+    border: 1.5px solid #111111 !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-weight: 700 !important;
+    border-radius: 4px !important;
+  }
+
+  /* Achievements and badges */
+  .badge-card,
+  [data-hovercard-type="achievement"] {
+    border: 1px solid #111111 !important;
+    border-radius: 4px !important;
+    background-color: #E5DFD4 !important;
+  }
+
+  /* Activity overview box */
+  .activity-overview-box {
+    border: 1.5px solid #111111 !important;
+    background-color: #F1EDE4 !important;
+    border-radius: 6px !important;
+  }
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview: Retro Newsprint Profile (786AdiPY)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #0d1117;
+      color: #111111;
+      font-family: 'IBM Plex Mono', monospace;
+      padding: 0;
+    }
+
+    /* Mock GitHub Header */
+    .gh-header {
+      background-color: #010409;
+      color: #f0f6fc;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #111111;
+    }
+    .gh-header .brand {
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .gh-header .search-bar {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 5px 12px;
+      color: #8b949e;
+      font-size: 13px;
+      width: 260px;
+    }
+
+    /* GitHub Canvas Wrapper */
+    .page-canvas {
+      background-color: #F1EDE4;
+      min-height: 100vh;
+      padding: 24px 32px;
+    }
+
+    .profile-layout {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 32px;
+    }
+
+    /* Left Sidebar: Kept exactly as specified */
+    .left-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .avatar-wrapper {
+      position: relative;
+      width: 260px;
+      height: 260px;
+    }
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 3px solid #111111;
+      object-fit: cover;
+      box-shadow: 4px 4px 0px #111111;
+    }
+    .profile-names h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.2;
+    }
+    .profile-names .handle {
+      font-size: 16px;
+      color: #555555;
+    }
+    .profile-tagline {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-top: 6px;
+    }
+    .profile-slashes {
+      font-size: 12.5px;
+      color: #333333;
+      line-height: 1.6;
+      margin-top: 4px;
+    }
+    .edit-btn {
+      background-color: #111111;
+      color: #F1EDE4;
+      border: 1.5px solid #111111;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 4px;
+    }
+    .sidebar-stats {
+      font-size: 12px;
+      color: #555555;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .linkedin-link {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #111111;
+      text-decoration: underline;
+    }
+    .achievements-box {
+      border-top: 1px solid #111111;
+      padding-top: 12px;
+    }
+    .achievements-box h3 {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+      color: #555555;
+    }
+    .badges-row {
+      display: flex;
+      gap: 8px;
+    }
+    .badge {
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid #111111;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #E5DFD4;
+      font-size: 18px;
+    }
+
+    /* Right Main Column */
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Tabs */
+    .tabs-nav {
+      display: flex;
+      gap: 6px;
+      border-bottom: 2px solid #111111;
+      padding-bottom: 0;
+    }
+    .tab-item {
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border: 1.5px solid #111111;
+      border-bottom: none;
+      border-radius: 5px 5px 0 0;
+      background: #E5DFD4;
+      color: #111111;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .tab-item.active {
+      background: #F1EDE4;
+      border: 2px solid #111111;
+      border-bottom: 2px solid #F1EDE4;
+      margin-bottom: -2px;
+    }
+    .tab-count {
+      background: #111111;
+      color: #F1EDE4;
+      font-size: 10px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-left: 4px;
+    }
+
+    /* Readme Container */
+    .readme-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .banner-wrapper img,
+    .header-wrapper img,
+    .contributions-wrapper img,
+    .footer-wrapper img {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .pinned-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .pinned-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .pinned-grid img {
+      width: 100%;
+      display: block;
+      transition: transform 0.15s ease;
+    }
+    .pinned-grid img:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top GitHub Nav (kept dark as requested) -->
+  <header class="gh-header">
+    <div class="brand">
+      <svg height="24" viewBox="0 0 16 16" width="24" fill="#ffffff">
+        <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+      </svg>
+      <span>786AdiPY</span>
+    </div>
+    <div class="search-bar">Type / to search</div>
+  </header>
+
+  <!-- Newsprint Page Canvas -->
+  <div class="page-canvas">
+    <div class="profile-layout">
+
+      <!-- LEFT SIDEBAR: Kept strictly as specified by user -->
+      <aside class="left-sidebar">
+        <div class="avatar-wrapper">
+          <!-- User's actual profile photo kept! -->
+          <img class="avatar-img" src="assets/avatar-halftone.png" alt="786AdiPY Avatar" />
+        </div>
+
+        <div class="profile-names">
+          <h1>Adithya A M</h1>
+          <div class="handle">786AdiPY</div>
+        </div>
+
+        <div>
+          <div class="profile-tagline">TECH ENTHUSIAST</div>
+          <div class="profile-slashes">
+            / Full-Stack Developer<br>
+            / AI Engineer<br>
+            / Systems &amp; Security
+          </div>
+        </div>
+
+        <button class="edit-btn">Edit profile</button>
+
+        <div class="sidebar-stats">
+          <span>👥 10 followers</span>
+          <span>·</span>
+          <span>18 following</span>
+        </div>
+
+        <div>
+          <a class="linkedin-link" href="https://linkedin.com/in/adithya-am-adi" target="_blank">🔗 in/adithya-am-adi ↗</a>
+        </div>
+
+        <div class="achievements-box">
+          <h3>ACHIEVEMENTS</h3>
+          <div class="badges-row">
+            <div class="badge" title="Trophy">🏆</div>
+            <div class="badge" title="YOLO">🔥</div>
+            <div class="badge" title="Pull Shark">💻</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT COLUMN: Pinned, Banner, Contributions, Footer -->
+      <main class="right-column">
+        <!-- Tabs -->
+        <nav class="tabs-nav">
+          <a class="tab-item active">Overview</a>
+          <a class="tab-item">Repositories <span class="tab-count">31</span></a>
+          <a class="tab-item">Projects</a>
+          <a class="tab-item">Packages</a>
+          <a class="tab-item">Stars <span class="tab-count">12</span></a>
+        </nav>
+
+        <!-- README content -->
+        <div class="readme-container">
+          <!-- 1. Full-width banner -->
+          <div class="banner-wrapper">
+            <img src="assets/banner.svg" alt="786ADIPY Banner" />
+          </div>
+
+          <!-- 2. Header Block -->
+          <div class="header-wrapper">
+            <img src="assets/header.svg" alt="Header Block" />
+          </div>
+
+          <!-- 3. PINNED Section -->
+          <div>
+            <div class="pinned-header">
+              <strong>■ PINNED</strong>
+              <sub><code>CUSTOMIZE YOUR PINS ↗</code></sub>
+            </div>
+            <div class="pinned-grid">
+              <a href="https://github.com/786AdiPY/Kompress" target="_blank">
+                <img src="assets/card-kompress.svg" alt="Kompress" />
+              </a>
+              <a href="https://github.com/786AdiPY/RangeShield-AI" target="_blank">
+                <img src="assets/card-rangeshield.svg" alt="RangeShield-AI" />
+              </a>
+              <a href="https://github.com/786AdiPY/Arize" target="_blank">
+                <img src="assets/card-arize.svg" alt="Arize" />
+              </a>
+              <a href="https://github.com/786AdiPY/LeetGeek" target="_blank">
+                <img src="assets/card-leetgeek.svg" alt="LeetGeek" />
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Contribution Section -->
+          <div class="contributions-wrapper">
+            <img src="assets/contributions.svg" alt="Contributions Calendar" />
+          </div>
+
+          <!-- 5. Footer Divider -->
+          <div class="footer-wrapper">
+            <img src="assets/footer.svg" alt="Activity Overview | Code Review" />
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>
