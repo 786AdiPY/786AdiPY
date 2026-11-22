@@ -6,13 +6,16 @@ Self-contained with embedded base64 fonts and halftone artwork.
 import os
 import sys
 
-# Add scripts directory to path
 sys.path.insert(0, os.path.dirname(__file__))
 from fonts_data import FONT_STYLESHEET
 from illustrations_data import ILLUSTRATION_MOUNTAIN
 
-def generate_banner(output_path="assets/banner.svg"):
+def generate_banner(output_path="assets/banner.svg", brand_title="Adithya A M"):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    # Calculate responsive font size based on text length
+    # For 'Adithya A M' (11 chars), 98px gives optimal masthead proportions
+    font_size = 98 if len(brand_title) <= 12 else 86
     
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 220" width="1280" height="220">
   <defs>
@@ -30,9 +33,9 @@ def generate_banner(output_path="assets/banner.svg"):
       }}
       .brand-title {{
         font-family: 'DM Serif Display', 'Playfair Display', Georgia, serif;
-        font-size: 114px;
+        font-size: {font_size}px;
         font-weight: 400;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         fill: #111111;
       }}
     </style>
@@ -49,7 +52,7 @@ def generate_banner(output_path="assets/banner.svg"):
   <line x1="20" y1="36" x2="1260" y2="36" class="rule" stroke-width="1.5" />
 
   <!-- Giant serif brand -->
-  <text x="20" y="156" class="brand-title">786ADIPY</text>
+  <text x="24" y="152" class="brand-title">{brand_title}</text>
 
   <!-- Dithered mountain range and sun illustration -->
   <image href="data:image/png;base64,{ILLUSTRATION_MOUNTAIN}" x="660" y="42" width="600" height="148" preserveAspectRatio="xMidYMid meet" />
@@ -62,7 +65,7 @@ def generate_banner(output_path="assets/banner.svg"):
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(svg.strip())
         
-    print(f"Generated {output_path} ({os.path.getsize(output_path)} bytes)")
+    print(f"Generated {output_path} with title '{brand_title}' ({os.path.getsize(output_path)} bytes)")
 
 if __name__ == "__main__":
     generate_banner()

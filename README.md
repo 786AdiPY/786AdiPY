@@ -1,6 +1,6 @@
 <!-- Retro Newsprint / Halftone Profile - 786AdiPY -->
 <div align="center">
-  <img src="assets/banner.svg" alt="786ADIPY Masthead Banner" width="100%" />
+  <img src="assets/banner.svg" alt="Adithya A M Masthead Banner" width="100%" />
 </div>
 
 <br />
