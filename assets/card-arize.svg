@@ -66,8 +66,8 @@
   <text x="139" y="33" class="card-pill-text" text-anchor="middle">Public</text>
 
   <!-- One-line / two-line monospace description -->
-  <text x="22" y="66" class="card-desc">Mlops Agent that eases llm</text>
-  <text x="22" y="84" class="card-desc">lifecycle</text>
+  <text x="22" y="66" class="card-desc">MLOps agent that eases ML</text>
+  <text x="22" y="84" class="card-desc">lifecycle.</text>
 
   <!-- Language dot and name -->
   <circle cx="27" cy="146" r="5" fill="#111111" />

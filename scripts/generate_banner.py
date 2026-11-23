@@ -10,12 +10,11 @@ sys.path.insert(0, os.path.dirname(__file__))
 from fonts_data import FONT_STYLESHEET
 from illustrations_data import ILLUSTRATION_MOUNTAIN
 
-def generate_banner(output_path="assets/banner.svg", brand_title="Adithya A M"):
+def generate_banner(output_path="assets/banner.svg", brand_title="Adithya"):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
-    # Calculate responsive font size based on text length
-    # For 'Adithya A M' (11 chars), 98px gives optimal masthead proportions
-    font_size = 98 if len(brand_title) <= 12 else 86
+    # 114px font size for 'Adithya' gives the giant serif masthead style
+    font_size = 114 if len(brand_title) <= 8 else (98 if len(brand_title) <= 12 else 86)
     
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 220" width="1280" height="220">
   <defs>
@@ -52,7 +51,7 @@ def generate_banner(output_path="assets/banner.svg", brand_title="Adithya A M"):
   <line x1="20" y1="36" x2="1260" y2="36" class="rule" stroke-width="1.5" />
 
   <!-- Giant serif brand -->
-  <text x="24" y="152" class="brand-title">{brand_title}</text>
+  <text x="24" y="156" class="brand-title">{brand_title}</text>
 
   <!-- Dithered mountain range and sun illustration -->
   <image href="data:image/png;base64,{ILLUSTRATION_MOUNTAIN}" x="660" y="42" width="600" height="148" preserveAspectRatio="xMidYMid meet" />
